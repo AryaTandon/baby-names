@@ -1,8 +1,18 @@
-const child = ({name}:{name:string}) => {
+interface IName {
+  id: number;
+  name: string;
+  sex: string;
+  favouriteName: (id: number) => void
+}
+
+const Child = ({id, name, sex, favouriteName}: IName) => {
     return (
-        <div>
-          {name}  
-        </div>
+        <button 
+        id={String(id)}
+        onClick = {() => 
+        favouriteName(id)}>
+        { sex === "m" ? <div id="boy"> {name} </div> : <div id = "girl"> {name} </div> }
+        </button>
     )
 }
-export default child
+export default Child

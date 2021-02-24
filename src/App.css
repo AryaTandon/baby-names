@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+#boy {
+  color: rgb(17, 17, 226);
+}
+
+#girl {
+  color: rgb(241, 16, 223);
+}
